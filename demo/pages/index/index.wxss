@@ -1,0 +1,15 @@
+/**index.wxss**/
+page {
+    background-color: #e5e5e5;
+}
+
+.row {
+  background-color:#fff;
+  margin-bottom: 20rpx;
+}
+
+.label {
+    border-bottom: 1rpx solid #e5e5e5;
+    font-size: 28rpx;
+    padding: 12rpx 24rpx;
+}

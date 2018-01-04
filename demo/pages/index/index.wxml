@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="row">
+    <view class="label">日期选择</view>
+      <date-picker bindonselectdate="handleSelecteDate" />
+    </view>
+
+    <view class="row">
+    <view class="label">日期选择(附带时间)</view>
+      <date-picker bindonselectdate="handleSelecteDate" enableTime="{{true}}"/>
+    </view>
+
+
+    <view class="row">
+    <view class="label">日期选择(传入默认选择时间)</view>
+    <date-picker date="{{'2018/01/02'}}" bindonselectdate="handleSelecteDate" />
+    </view>
+
+</view>

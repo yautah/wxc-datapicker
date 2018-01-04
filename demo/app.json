@@ -1,0 +1,9 @@
+{
+  "pages": ["pages/index/index", "pages/logs/logs"],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "日期、时间选择自定义组件",
+    "navigationBarTextStyle": "light"
+  }
+}

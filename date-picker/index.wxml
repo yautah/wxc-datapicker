@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="date-display flex">
+    <view class="next-prev" bindtap="changeMonth" data-id="prev">
+      <view class="arrow prev"></view>
+    </view>
+    <picker style="flex:6;width:100%" value="{{currYear+'-'+currMonth}}" fields="month" mode="date" bindchange="handleDatePickerChange">
+      <view class="selected-date" style="display:flex;align-items:center;justify-content:center">
+        <view>{{currYear}}年{{currMonth}}月</view>
+        <view class="arrow down" />
+      </view>
+    </picker>
+    <view class="next-prev" bindtap="changeMonth" data-id="next">
+      <view class="arrow next"></view>
+    </view>
+  </view>
+  <view class="week-display flex">
+    <view wx:key="{{index}}" wx:for="{{week}}" class="week-cell {{item.class}}">{{item.value}}</view>
+  </view>
+  <view class="date-picker">
+    <view class="flex">
+      <view wx:key="{{index}}" wx:for="{{emptyGrids}}" class="date-cell"></view>
+      <view wx:key="{{index}}" wx:for="{{days}}" class="date-cell" bindtap="handleSelectDate" data-selected="{{[currYear, currMonth, item.value]}}">
+        <view class="{{item.class}}{{selected == item.value ? ' selected': ''}}" data-selected="{{[currYear, currMonth, item.value]}}">{{item.value}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="actions" style="display:flex;box-sizing: border-box; padding:12rpx 24rpx;">
+    <picker mode="time" bindchange="handleTimePickerChange" value="{{time}}">
+      <view class="" style="display:{{enableTime ? 'flex' : 'none'}};flex:1;font-size:24rpx;align-items:center">
+        时间 <input value="{{time||'00:00'}}" disabled style="margin-left:12rpx;width:80rpx;padding:0rpx 12rpx;border:1px solid #e5e5e5;"/>
+      </view>
+    </picker>
+    <view class="" style="display:flex;justify-content:flex-end;align-items:flex-end;flex:2">
+      <button bindtap="handleReset" style="margin:0;padding-left:20rpx;padding-right:20rpx;" size="mini" type="default">清空</button>
+      <button bindtap="handleChooseToday" style="margin:0;padding-left:20rpx;padding-right:20rpx;margin-left:24rpx;" size="mini" type="default">今天</button>
+      <button disabled="{{!selected||selected.length<3}}" bindtap="handleConfirm" style="margin:0;padding-left:20rpx;padding-right:20rpx;margin-left:24rpx;" size="mini" type="warn">确定</button>
+    </view>
+  </view>
+</view>

@@ -19,6 +19,8 @@
 
 ## 使用
 
+> 可参见 demo
+
 ## 截图
 
 ![](https://github.com/yautah/wxc-datapicker/blob/master/snapshots/1.png?raw=true)

@@ -21,5 +21,6 @@
 
 ## 截图
 
-![](http://s3.mogucdn.com/mlcdn/c45406/171101_850g622e33552bb75f74ael4k563f_3882x1734.png_1200x999.jpg)
-![](http://s3.mogucdn.com/mlcdn/c45406/171025_00h0heed7c1a5iid87ch299h3l8j4_3882x1734.png_1200x999.jpg)
+![](https://github.com/yautah/wxc-datapicker/blob/master/snapshots/1.png?raw=true)
+![](https://github.com/yautah/wxc-datapicker/blob/master/snapshots/2.png?raw=true)
+![](https://github.com/yautah/wxc-datapicker/blob/master/snapshots/3.png?raw=true)
